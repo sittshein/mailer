@@ -4,7 +4,7 @@ var app          = express();
 var path         = require('path');
 var massMailer   = require('./massMailer');
 var listofemails = ['sittshein@gmail.com', 'sittshein.jr@gmail.com'];
-var port         = '3000';
+var port         = Number(process.env.PORT || 3000);
 
 // set the public folder to serve public assets
 app.use(express.static(__dirname + '/public'));
